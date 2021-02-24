@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import { Input, Button } from '../../common'
+import { Input, Button, Spinner, Card, CardSection } from '../../common'
 
 class LoginForm extends Component{
   state = {
@@ -12,7 +12,7 @@ class LoginForm extends Component{
 
   buttonRender = () => {
     const { loading } = this.state;
-    return loading?<Button>cargando</Button>:<Button>Login</Button> 
+    return loading?<Spinner size='small' />:<Button>Log in</Button> 
   }
   render(){
     return( 
@@ -32,8 +32,8 @@ class LoginForm extends Component{
             secureTextEntry={true}
             onChangeText={text => this.setState({ password:text })}
           />
-        </View>
-        {this.buttonRender()}
+        </View>       
+            {this.buttonRender()}
       </View>       
     )
   }

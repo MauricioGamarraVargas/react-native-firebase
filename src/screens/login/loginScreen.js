@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import LoginForm from './loginFormScreen';
 
 class Login extends Component{
-  
+
   render(){
     return(
       <View>
