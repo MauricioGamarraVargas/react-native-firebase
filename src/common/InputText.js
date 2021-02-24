@@ -8,20 +8,21 @@ const Input = (props) => {
       <TextInput 
         style={styles.inputStyle}
         value={props.value}
+        placeholder={props.placeholder}
         onChangeText={props.onChangeText}
+        secureTextEntry={props.secureTextEntry? true: false}
       />
     </View>
   )
 }
 
 const styles = {
-  contentStyle: {
-    width: '90%',
-    
-    marginLeft: 15,
-    marginRight:15,
+  contentStyle:{  
     borderColor: '#000',
     borderBottomWidth: 1,
+    marginTop: 20,
+    marginLeft: 15,
+    marginRight: 15,
   },
 
   inputStyle: {
